@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Quiz Interactivo - Evaluación de Construcción y Mantenimiento de Software</title>
-  <!-- Enlace a Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Enlace a nuestro estilo personalizado -->
+  <!-- Nuestro CSS personalizado -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <form id="quizForm">
       
       <!-- Pregunta 1 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q1Card">
         <div class="card-body">
           <p class="card-text"><strong>1. Enumere de forma ordenada las etapas del proceso de evolución del sistema:</strong></p>
           <p class="text-muted small">Respuesta esperada: Solicitud de cambios, Análisis de impacto, Plan de liberación, Implementación del cambio, Liberación del nuevo sistema</p>
@@ -23,7 +23,7 @@
       </div>
       
       <!-- Pregunta 2 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q2Card">
         <div class="card-body">
           <p class="card-text"><strong>2. Indique cuáles son los tipos de mantenimiento del software:</strong></p>
           <div class="form-check">
@@ -42,7 +42,7 @@
       </div>
       
       <!-- Pregunta 3 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q3Card">
         <div class="card-body">
           <p class="card-text"><strong>3. Indique qué actividad es la que más tiempo toma dentro del mantenimiento del software:</strong></p>
           <p class="text-muted small">Respuesta esperada: Pruebas</p>
@@ -51,7 +51,7 @@
       </div>
       
       <!-- Pregunta 4 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q4Card">
         <div class="card-body">
           <p class="card-text"><strong>4. Indique 2 razones para refactorizar código:</strong></p>
           <p class="text-muted small">Respuesta esperada: (1) Cuando se hace un desarrollo con resultados inmediatos y a corto plazo; (2) Cuando ya no se tiene el control.</p>
@@ -60,7 +60,7 @@
       </div>
       
       <!-- Pregunta 5 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q5Card">
         <div class="card-body">
           <p class="card-text"><strong>5. Enumere las actividades del proceso de reingeniería:</strong></p>
           <p class="text-muted small">Respuesta esperada: Traducción del código fuente, Analizar el programa para entenderlo, Mejorar la estructura del programa, Modularizar el programa, Reingeniería de datos</p>
@@ -69,7 +69,7 @@
       </div>
       
       <!-- Pregunta 6 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q6Card">
         <div class="card-body">
           <p class="card-text"><strong>6. A medida que se hace mantenimiento a un software este se vuelve más complejo:</strong></p>
           <div class="form-check form-check-inline">
@@ -84,7 +84,7 @@
       </div>
       
       <!-- Pregunta 7 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q7Card">
         <div class="card-body">
           <p class="card-text"><strong>7. Cuando se dice “Si funciona no lo toques” significa que tenemos bajo control esa aplicación:</strong></p>
           <div class="form-check form-check-inline">
@@ -99,7 +99,7 @@
       </div>
       
       <!-- Pregunta 8 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q8Card">
         <div class="card-body">
           <p class="card-text"><strong>8. Las solicitudes de cambios urgentes pueden ser implementadas sin pasar por todas las etapas del proceso de ingeniería de software:</strong></p>
           <div class="form-check form-check-inline">
@@ -114,7 +114,7 @@
       </div>
       
       <!-- Pregunta 9 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q9Card">
         <div class="card-body">
           <p class="card-text"><strong>9. Las leyes de Lehman describen una serie de conocimientos sobre el mantenimiento de los sistemas:</strong></p>
           <div class="form-check form-check-inline">
@@ -129,7 +129,7 @@
       </div>
       
       <!-- Pregunta 10 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q10Card">
         <div class="card-body">
           <p class="card-text"><strong>10. ¿Qué afirmación no es correcta con respecto a los comentarios?</strong></p>
           <div class="form-check">
@@ -152,7 +152,7 @@
       </div>
       
       <!-- Pregunta 11 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q11Card">
         <div class="card-body">
           <p class="card-text"><strong>11. Al mantenimiento Adaptativo del software también se lo conoce como Evolutivo:</strong></p>
           <div class="form-check form-check-inline">
@@ -167,7 +167,7 @@
       </div>
       
       <!-- Pregunta 12 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q12Card">
         <div class="card-body">
           <p class="card-text"><strong>12. El software antiguo suele tener coste de mantenimiento:</strong></p>
           <div class="form-check form-check-inline">
@@ -182,7 +182,7 @@
       </div>
       
       <!-- Pregunta 13 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q13Card">
         <div class="card-body">
           <p class="card-text"><strong>13. La complejidad de los componentes de software depende de:</strong></p>
           <p class="text-muted small">Respuesta esperada: La arquitectura</p>
@@ -191,7 +191,7 @@
       </div>
       
       <!-- Pregunta 14 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q14Card">
         <div class="card-body">
           <p class="card-text"><strong>14. ¿Por qué las organizaciones deciden poner en producción software con defectos?</strong></p>
           <p class="text-muted small">Respuesta esperada: Porque la utilidad y el valor del software en un determinado nivel de calidad compensa el impacto de los defectos conocidos</p>
@@ -200,7 +200,7 @@
       </div>
       
       <!-- Pregunta 15 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q15Card">
         <div class="card-body">
           <p class="card-text"><strong>15. ¿A qué tipo de mantenimiento corresponde las modificaciones relacionadas con: Añadir comentarios, reestructurar métodos?</strong></p>
           <div class="form-check form-check-inline">
@@ -219,7 +219,7 @@
       </div>
       
       <!-- Pregunta 16 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q16Card">
         <div class="card-body">
           <p class="card-text"><strong>16. Ordena las etapas del proceso de evolución del sistema:</strong></p>
           <p class="text-muted small">Respuesta esperada: Plan de liberación, Solicitud de cambios, Análisis de impacto, Liberación del nuevo sistema, Implementación del cambio</p>
@@ -228,7 +228,7 @@
       </div>
       
       <!-- Pregunta 17 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q17Card">
         <div class="card-body">
           <p class="card-text"><strong>17. Las leyes de Lehman describen una serie de conocimientos sobre la reingeniería de los sistemas de los sistemas:</strong></p>
           <div class="form-check form-check-inline">
@@ -243,7 +243,7 @@
       </div>
       
       <!-- Pregunta 18 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q18Card">
         <div class="card-body">
           <p class="card-text"><strong>18. Relacione las leyes de Lehman con su definición:</strong></p>
           <p class="text-muted small">Respuesta esperada: Debe incluir: "Ley del cambio continuo: Un programa que es usado", "Ley del decremento de la calidad: La calidad de los sistemas", "Ley de complejidad creciente: Cuando un programa evoluciona" y "Ley de crecimiento continuado: La funcionalidad ofrecida por los sistemas".</p>
@@ -252,7 +252,7 @@
       </div>
       
       <!-- Pregunta 19 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q19Card">
         <div class="card-body">
           <p class="card-text"><strong>19. La refactorización restructura el software sin modificar su comportamiento:</strong></p>
           <div class="form-check form-check-inline">
@@ -267,7 +267,7 @@
       </div>
       
       <!-- Pregunta 20 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q20Card">
         <div class="card-body">
           <p class="card-text"><strong>20. La principal herramienta del desarrollo basado en pruebas (TDD) es la refactorización:</strong></p>
           <div class="form-check form-check-inline">
@@ -282,7 +282,7 @@
       </div>
       
       <!-- Pregunta 21 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q21Card">
         <div class="card-body">
           <p class="card-text"><strong>21. El mantenimiento de software está fuera del ciclo de la vida de desarrollo de software:</strong></p>
           <div class="form-check form-check-inline">
@@ -297,7 +297,7 @@
       </div>
       
       <!-- Pregunta 22 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q22Card">
         <div class="card-body">
           <p class="card-text"><strong>22. ¿Cuál de las siguientes afirmaciones no está relacionada con la problemática en el mantenimiento del software?</strong></p>
           <div class="form-check">
@@ -312,7 +312,7 @@
       </div>
       
       <!-- Pregunta 23 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q23Card">
         <div class="card-body">
           <p class="card-text"><strong>23. Ordene los pasos del ciclo de vida del mantenimiento del software:</strong></p>
           <p class="text-muted small">Respuesta esperada: Notificación de fallos, Anotación de los fallos, Reparación de defectos, Puesta en producción</p>
@@ -321,7 +321,7 @@
       </div>
       
       <!-- Pregunta 24 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q24Card">
         <div class="card-body">
           <p class="card-text"><strong>24. Una de las ventajas de la reingeniería es que los costes suelen ser significativamente menores que el desarrollo de un nuevo software:</strong></p>
           <div class="form-check form-check-inline">
@@ -336,7 +336,7 @@
       </div>
       
       <!-- Pregunta 25 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q25Card">
         <div class="card-body">
           <p class="card-text"><strong>25. ¿Qué indican las leyes de Lehman respecto a la evolución del software?</strong></p>
           <p class="text-muted small">Respuesta esperada: Describen observaciones sobre cómo el software tiende a volverse más complejo a medida que evoluciona.</p>
@@ -345,7 +345,7 @@
       </div>
       
       <!-- Pregunta 26 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q26Card">
         <div class="card-body">
           <p class="card-text"><strong>26. ¿Cuál es la importancia de mantener la inversión en sistemas de software?</strong></p>
           <p class="text-muted small">Respuesta esperada: Porque son activos empresariales críticos y deben evolucionar para mantener su valor.</p>
@@ -354,7 +354,7 @@
       </div>
       
       <!-- Pregunta 27 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q27Card">
         <div class="card-body">
           <p class="card-text"><strong>27. ¿Qué factor influye en el coste de mantenimiento?</strong></p>
           <p class="text-muted small">Respuesta esperada: La experiencia del personal, la estabilidad del equipo y la responsabilidad contractual, entre otros.</p>
@@ -363,7 +363,7 @@
       </div>
       
       <!-- Pregunta 28 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q28Card">
         <div class="card-body">
           <p class="card-text"><strong>28. ¿Qué se entiende por mantenimiento preventivo?</strong></p>
           <p class="text-muted small">Respuesta esperada: Acciones destinadas a prevenir futuros problemas y reducir la degradación del sistema.</p>
@@ -372,7 +372,7 @@
       </div>
       
       <!-- Pregunta 29 -->
-      <div class="card mb-3">
+      <div class="card mb-3" id="q29Card">
         <div class="card-body">
           <p class="card-text"><strong>29. ¿Qué representa la Ley de retroalimentación de Lehman?</strong></p>
           <p class="text-muted small">Respuesta esperada: Que los procesos de evolución incorporan sistemas de retroalimentación y deben ser tratados como tales para mejorar significativamente el producto.</p>
@@ -388,9 +388,9 @@
     <div class="result text-center mt-4" id="result"></div>
   </div>
   
-  <!-- Bootstrap JS (opcional, para componentes interactivos de Bootstrap) -->
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Nuestro JavaScript -->
+  <!-- Nuestro archivo JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>

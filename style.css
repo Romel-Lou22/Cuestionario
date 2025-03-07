@@ -1,8 +1,23 @@
 body {
-    background-color: #f0f2f5;
-  }
-  
-  .card {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+  background-color: #f0f2f5;
+}
+
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Opcional: estilo para el marcador de resultado */
+.result-marker {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.result-marker.correct {
+  color: green !important;
+}
+.result-marker.incorrect {
+  color: red !important;
+}
