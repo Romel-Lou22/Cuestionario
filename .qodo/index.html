@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Interactivo - Evaluación de Construcción y Mantenimiento de Software</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      background: #fff;
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .question p {
+      margin: 5px 0;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 1em;
+      margin-top: 5px;
+    }
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+    .result {
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz Interactivo - Evaluación de Construcción y Mantenimiento de Software</h1>
+  <form id="quizForm">
+    <!-- Pregunta 1 -->
+    <div class="question">
+      <p><strong>1. Enumere de forma ordenada las etapas del proceso de evolución del sistema:</strong></p>
+      <p><em>Respuesta esperada:</em> Solicitud de cambios, Análisis de impacto, Plan de liberación, Implementación del cambio, Liberación del nuevo sistema</p>
+      <input type="text" id="q1" placeholder="Escribe las etapas separadas por comas">
+    </div>
+    
+    <!-- Pregunta 2 -->
+    <div class="question">
+      <p><strong>2. Indique cuáles son los tipos de mantenimiento del software:</strong></p>
+      <label><input type="checkbox" name="q2" value="Preventivo"> Preventivo</label><br>
+      <label><input type="checkbox" name="q2" value="Correctivo"> Correctivo</label><br>
+      <label><input type="checkbox" name="q2" value="Adaptativo"> Adaptativo</label>
+    </div>
+    
+    <!-- Pregunta 3 -->
+    <div class="question">
+      <p><strong>3. Indique qué actividad es la que más tiempo toma dentro del mantenimiento del software:</strong></p>
+      <p><em>Respuesta esperada:</em> Pruebas</p>
+      <input type="text" id="q3" placeholder="Escribe tu respuesta">
+    </div>
+    
+    <!-- Pregunta 4 -->
+    <div class="question">
+      <p><strong>4. Indique 2 razones para refactorizar código:</strong></p>
+      <p><em>Respuesta esperada:</em> (1) Cuando se hace un desarrollo con resultados inmediatos y a corto plazo; (2) Cuando ya no se tiene el control.</p>
+      <input type="text" id="q4" placeholder="Escribe tus 2 razones">
+    </div>
+    
+    <!-- Pregunta 5 -->
+    <div class="question">
+      <p><strong>5. Enumere las actividades del proceso de reingeniería:</strong></p>
+      <p><em>Respuesta esperada:</em> Traducción del código fuente, Analizar el programa para entenderlo, Mejorar la estructura del programa, Modularizar el programa, Reingeniería de datos</p>
+      <input type="text" id="q5" placeholder="Escribe las actividades separadas por comas">
+    </div>
+    
+    <!-- Pregunta 6 -->
+    <div class="question">
+      <p><strong>6. A medida que se hace mantenimiento a un software este se vuelve más complejo:</strong></p>
+      <label><input type="radio" name="q6" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q6" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 7 -->
+    <div class="question">
+      <p><strong>7. Cuando se dice “Si funciona no lo toques” significa que tenemos bajo control esa aplicación:</strong></p>
+      <label><input type="radio" name="q7" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q7" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 8 -->
+    <div class="question">
+      <p><strong>8. Las solicitudes de cambios urgentes pueden ser implementadas sin pasar por todas las etapas del proceso de ingeniería de software:</strong></p>
+      <label><input type="radio" name="q8" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q8" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 9 -->
+    <div class="question">
+      <p><strong>9. Las leyes de Lehman describen una serie de conocimientos sobre el mantenimiento de los sistemas:</strong></p>
+      <label><input type="radio" name="q9" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q9" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 10 -->
+    <div class="question">
+      <p><strong>10. ¿Qué afirmación no es correcta con respecto a los comentarios?</strong></p>
+      <label><input type="radio" name="q10" value="Opcion1"> Son una señal de que el código es claro y comprensible.</label><br>
+      <label><input type="radio" name="q10" value="Opcion2"> Llegan a ser obsoletos con facilidad.</label><br>
+      <label><input type="radio" name="q10" value="Opcion3"> Los comentarios mienten, el código no miente.</label><br>
+      <label><input type="radio" name="q10" value="Opcion4"> Son indicadores de que un bloque de código debe ser un método.</label>
+    </div>
+    
+    <!-- Pregunta 11 -->
+    <div class="question">
+      <p><strong>11. Al mantenimiento Adaptativo del software también se lo conoce como Evolutivo:</strong></p>
+      <label><input type="radio" name="q11" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q11" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 12 -->
+    <div class="question">
+      <p><strong>12. El software antiguo suele tener coste de mantenimiento:</strong></p>
+      <label><input type="radio" name="q12" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q12" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 13 -->
+    <div class="question">
+      <p><strong>13. La complejidad de los componentes de software depende de:</strong></p>
+      <p><em>Respuesta esperada:</em> La arquitectura</p>
+      <input type="text" id="q13" placeholder="Escribe tu respuesta">
+    </div>
+    
+    <!-- Pregunta 14 -->
+    <div class="question">
+      <p><strong>14. ¿Por qué las organizaciones deciden poner en producción software con defectos?</strong></p>
+      <p><em>Respuesta esperada:</em> Porque la utilidad y el valor del software en un determinado nivel de calidad compensa el impacto de los defectos conocidos</p>
+      <input type="text" id="q14" placeholder="Escribe tu respuesta">
+    </div>
+    
+    <!-- Pregunta 15 -->
+    <div class="question">
+      <p><strong>15. ¿A qué tipo de mantenimiento corresponde las modificaciones relacionadas con: Añadir comentarios, reestructurar métodos?</strong></p>
+      <label><input type="radio" name="q15" value="Preventivo"> Preventivo</label>
+      <label><input type="radio" name="q15" value="Correctivo"> Correctivo</label>
+      <label><input type="radio" name="q15" value="Adaptativo"> Adaptativo</label>
+    </div>
+    
+    <!-- Pregunta 16 -->
+    <div class="question">
+      <p><strong>16. Ordena las etapas del proceso de evolución del sistema:</strong></p>
+      <p><em>Respuesta esperada:</em> Plan de liberación, Solicitud de cambios, Análisis de impacto, Liberación del nuevo sistema, Implementación del cambio</p>
+      <input type="text" id="q16" placeholder="Escribe las etapas separadas por comas">
+    </div>
+    
+    <!-- Pregunta 17 -->
+    <div class="question">
+      <p><strong>17. Las leyes de Lehman describen una serie de conocimientos sobre la reingeniería de los sistemas de los sistemas:</strong></p>
+      <label><input type="radio" name="q17" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q17" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 18 -->
+    <div class="question">
+      <p><strong>18. Relacione las leyes de Lehman con su definición:</strong></p>
+      <p><em>Respuesta esperada:</em> Debe incluir: "Ley del cambio continuo: Un programa que es usado", "Ley del decremento de la calidad: La calidad de los sistemas", "Ley de complejidad creciente: Cuando un programa evoluciona" y "Ley de crecimiento continuado: La funcionalidad ofrecida por los sistemas".</p>
+      <input type="text" id="q18" placeholder="Escribe tus relaciones separadas por punto y coma">
+    </div>
+    
+    <!-- Pregunta 19 -->
+    <div class="question">
+      <p><strong>19. La refactorización restructura el software sin modificar su comportamiento:</strong></p>
+      <label><input type="radio" name="q19" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q19" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 20 -->
+    <div class="question">
+      <p><strong>20. La principal herramienta del desarrollo basado en pruebas (TDD) es la refactorización:</strong></p>
+      <label><input type="radio" name="q20" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q20" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 21 -->
+    <div class="question">
+      <p><strong>21. El mantenimiento de software está fuera del ciclo de la vida de desarrollo de software:</strong></p>
+      <label><input type="radio" name="q21" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q21" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 22 -->
+    <div class="question">
+      <p><strong>22. ¿Cuál de las siguientes afirmaciones no está relacionada con la problemática en el mantenimiento del software?</strong></p>
+      <label><input type="radio" name="q22" value="Opcion1"> El coste de mantenimiento suele ser significativamente menor que el del desarrollo de un nuevo software.</label><br>
+      <label><input type="radio" name="q22" value="Opcion2"> Otra opción (dummy)</label>
+    </div>
+    
+    <!-- Pregunta 23 -->
+    <div class="question">
+      <p><strong>23. Ordene los pasos del ciclo de vida del mantenimiento del software:</strong></p>
+      <p><em>Respuesta esperada:</em> Notificación de fallos, Anotación de los fallos, Reparación de defectos, Puesta en producción</p>
+      <input type="text" id="q23" placeholder="Escribe los pasos separados por comas">
+    </div>
+    
+    <!-- Pregunta 24 -->
+    <div class="question">
+      <p><strong>24. Una de las ventajas de la reingeniería es que los costes suelen ser significativamente menores que el desarrollo de un nuevo software:</strong></p>
+      <label><input type="radio" name="q24" value="Verdadero"> Verdadero</label>
+      <label><input type="radio" name="q24" value="Falso"> Falso</label>
+    </div>
+    
+    <!-- Pregunta 25 (extra) -->
+    <div class="question">
+      <p><strong>25. ¿Qué indican las leyes de Lehman respecto a la evolución de software?</strong></p>
+      <p><em>Respuesta esperada:</em> Describen observaciones sobre cómo el software tiende a volverse más complejo a medida que evoluciona.</p>
+      <input type="text" id="q25" placeholder="Escribe tu respuesta">
+    </div>
+    
+    <!-- Pregunta 26 (extra) -->
+    <div class="question">
+      <p><strong>26. ¿Cuál es la importancia de mantener la inversión en sistemas de software?</strong></p>
+      <p><em>Respuesta esperada:</em> Porque son activos empresariales críticos y deben evolucionar para mantener su valor.</p>
+      <input type="text" id="q26" placeholder="Escribe tu respuesta">
+    </div>
+    
+    <!-- Pregunta 27 (extra) -->
+    <div class="question">
+      <p><strong>27. ¿Qué factor influye en el coste de mantenimiento?</strong></p>
+      <p><em>Respuesta esperada:</em> La experiencia del personal, la estabilidad del equipo y la responsabilidad contractual, entre otros.</p>
+      <input type="text" id="q27" placeholder="Escribe tu respuesta">
+    </div>
+    
+    <!-- Pregunta 28 (extra) -->
+    <div class="question">
+      <p><strong>28. ¿Qué se entiende por mantenimiento preventivo?</strong></p>
+      <p><em>Respuesta esperada:</em> Acciones destinadas a prevenir futuros problemas y reducir la degradación del sistema.</p>
+      <input type="text" id="q28" placeholder="Escribe tu respuesta">
+    </div>
+    
+    <!-- Pregunta 29 (extra) -->
+    <div class="question">
+      <p><strong>29. ¿Qué representa la Ley de retroalimentación de Lehman?</strong></p>
+      <p><em>Respuesta esperada:</em> Que los procesos de evolución incorporan sistemas de retroalimentación y deben ser tratados como tales para mejorar significativamente el producto.</p>
+      <input type="text" id="q29" placeholder="Escribe tu respuesta">
+    </div>
+    
+    <button type="button" onclick="checkAnswers()">Enviar Respuestas</button>
+  </form>
+  
+  <div class="result" id="result"></div>
+  
+  <script>
+    function checkAnswers() {
+      let score = 0;
+      const total = 29;
+      
+      // Q1
+      const q1 = document.getElementById("q1").value.toLowerCase();
+      if(q1.includes("solicitud") && q1.includes("análisis") && q1.includes("plan") && q1.includes("implementación") && q1.includes("liberación")){
+        score++;
+      }
+      
+      // Q2
+      const q2Elements = document.querySelectorAll('input[name="q2"]:checked');
+      let q2Values = Array.from(q2Elements).map(el => el.value);
+      if(q2Values.includes("Preventivo") && q2Values.includes("Correctivo") && q2Values.includes("Adaptativo") && q2Values.length === 3){
+        score++;
+      }
+      
+      // Q3
+      const q3 = document.getElementById("q3").value.toLowerCase();
+      if(q3.includes("pruebas")){
+        score++;
+      }
+      
+      // Q4
+      const q4 = document.getElementById("q4").value.toLowerCase();
+      if(q4.includes("inmediatos") && q4.includes("control")){
+        score++;
+      }
+      
+      // Q5
+      const q5 = document.getElementById("q5").value.toLowerCase();
+      if(q5.includes("traducción") && q5.includes("analizar") && q5.includes("mejorar") && q5.includes("modularizar") && q5.includes("reingeniería")){
+        score++;
+      }
+      
+      // Q6
+      const q6 = document.querySelector('input[name="q6"]:checked');
+      if(q6 && q6.value === "Verdadero") score++;
+      
+      // Q7
+      const q7 = document.querySelector('input[name="q7"]:checked');
+      if(q7 && q7.value === "Falso") score++;
+      
+      // Q8
+      const q8 = document.querySelector('input[name="q8"]:checked');
+      if(q8 && q8.value === "Verdadero") score++;
+      
+      // Q9
+      const q9 = document.querySelector('input[name="q9"]:checked');
+      if(q9 && q9.value === "Verdadero") score++;
+      
+      // Q10
+      const q10 = document.querySelector('input[name="q10"]:checked');
+      if(q10 && q10.value === "Opcion1") score++;
+      
+      // Q11
+      const q11 = document.querySelector('input[name="q11"]:checked');
+      if(q11 && q11.value === "Falso") score++;
+      
+      // Q12
+      const q12 = document.querySelector('input[name="q12"]:checked');
+      if(q12 && q12.value === "Falso") score++;
+      
+      // Q13
+      const q13 = document.getElementById("q13").value.toLowerCase();
+      if(q13.includes("arquitectura")) score++;
+      
+      // Q14
+      const q14 = document.getElementById("q14").value.toLowerCase();
+      if(q14.includes("valor") && q14.includes("compensa")) score++;
+      
+      // Q15
+      const q15 = document.querySelector('input[name="q15"]:checked');
+      if(q15 && q15.value === "Preventivo") score++;
+      
+      // Q16
+      const q16 = document.getElementById("q16").value.toLowerCase();
+      if(q16.includes("plan") && q16.includes("solicitud") && q16.includes("análisis") && q16.includes("liberación") && q16.includes("implementación")) score++;
+      
+      // Q17
+      const q17 = document.querySelector('input[name="q17"]:checked');
+      if(q17 && q17.value === "Falso") score++;
+      
+      // Q18
+      const q18 = document.getElementById("q18").value.toLowerCase();
+      if(q18.includes("cambio continuo") && q18.includes("decremento") && q18.includes("complejidad creciente") && q18.includes("crecimiento continuado")) score++;
+      
+      // Q19
+      const q19 = document.querySelector('input[name="q19"]:checked');
+      if(q19 && q19.value === "Verdadero") score++;
+      
+      // Q20
+      const q20 = document.querySelector('input[name="q20"]:checked');
+      if(q20 && q20.value === "Verdadero") score++;
+      
+      // Q21
+      const q21 = document.querySelector('input[name="q21"]:checked');
+      if(q21 && q21.value === "Falso") score++;
+      
+      // Q22
+      const q22 = document.querySelector('input[name="q22"]:checked');
+      if(q22 && q22.value === "Opcion1") score++;
+      
+      // Q23
+      const q23 = document.getElementById("q23").value.toLowerCase();
+      if(q23.includes("notificación") && q23.includes("anotación") && q23.includes("reparación") && q23.includes("puesta")) score++;
+      
+      // Q24
+      const q24 = document.querySelector('input[name="q24"]:checked');
+      if(q24 && q24.value === "Verdadero") score++;
+      
+      // Q25
+      const q25 = document.getElementById("q25").value.toLowerCase();
+      if(q25.includes("complejo") && q25.includes("observaciones")) score++;
+      
+      // Q26
+      const q26 = document.getElementById("q26").value.toLowerCase();
+      if(q26.includes("activos") && q26.includes("críticos")) score++;
+      
+      // Q27
+      const q27 = document.getElementById("q27").value.toLowerCase();
+      if(q27.includes("experiencia") && q27.includes("estabilidad") && q27.includes("contrato")) score++;
+      
+      // Q28
+      const q28 = document.getElementById("q28").value.toLowerCase();
+      if(q28.includes("prevenir") && q28.includes("problemas")) score++;
+      
+      // Q29
+      const q29 = document.getElementById("q29").value.toLowerCase();
+      if(q29.includes("retroalimentación") && q29.includes("sistemas")) score++;
+      
+      document.getElementById("result").textContent = "Tu puntaje: " + score + " de " + total;
+    }
+  </script>
+</body>
+</html>
